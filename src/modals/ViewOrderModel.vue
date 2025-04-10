@@ -48,7 +48,7 @@ onMounted(() => {
 
 <template>
   <div
-    class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-30 backdrop-blur-md z-50"
+    class="fixed inset-0 flex items-center justify-center drop-shadow-sm backdrop-blur-xl backdrop-opacity-90 z-50"
   >
     <div class="container m-auto max-w-2xl py-24">
       <div class="bg-white px-6 py-8 mb-4 shadow-md rounded-md m-4 md:m-0">

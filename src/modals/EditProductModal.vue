@@ -91,7 +91,7 @@ onMounted(async () => {
 
 <template>
   <div
-    class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-30 backdrop-blur-md z-50"
+    class="fixed inset-0 flex items-center justify-center drop-shadow-sm backdrop-blur-xl backdrop-opacity-90 z-50"
   >
     <div
       class="bg-white w-[600px] px-6 py-7 mb-4 rounded-lg border m-4 md:m-0 h-[600px] overflow-hidden"

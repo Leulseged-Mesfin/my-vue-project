@@ -46,7 +46,7 @@ const deleteProduct = async () => {
 
 <template>
   <div
-    class="fixed inset-0 flex items-center justify-center bg-gray-500 bg-opacity-30 backdrop-blur-md z-50"
+    class="fixed inset-0 flex items-center justify-center drop-shadow-sm backdrop-blur-xl backdrop-opacity-90 z-50"
   >
     <div
       class="max-w-md mx-auto bg-white rounded-lg shadow-lg overflow-hidden md:max-w-xl"
