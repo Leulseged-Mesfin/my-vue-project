@@ -1,0 +1,118 @@
+{
+  "products": [
+    {
+      "id": "b8e5",
+      "name": "Printer2",
+      "category": "Electronics",
+      "stock": "10",
+      "description": "Printer the Best",
+      "price": "55000"
+    },
+    {
+      "name": "Korkoro 2",
+      "category": "Electronics",
+      "stock": "100",
+      "description": "",
+      "price": "100000",
+      "id": "353e"
+    },
+    {
+      "id": "3c72",
+      "name": "Mismar",
+      "category": "Machinary",
+      "stock": "1000",
+      "description": "Mismar",
+      "price": "20"
+    },
+    {
+      "id": "8695",
+      "name": "Leulseged Mesfin",
+      "category": "Machinary",
+      "stock": "12",
+      "description": "",
+      "price": "32"
+    },
+    {
+      "id": "cb16",
+      "name": "sdfdscsd",
+      "category": "Machinary",
+      "stock": "23",
+      "description": "",
+      "price": "3423"
+    },
+    {
+      "id": "1357",
+      "name": "dsrgcdvfsd",
+      "category": "Machinary",
+      "stock": "123",
+      "description": "",
+      "price": "213234"
+    },
+    {
+      "id": "b06d",
+      "name": "defwef",
+      "category": "Machinary",
+      "stock": "25",
+      "description": "",
+      "price": "20"
+    },
+    {
+      "id": "2110",
+      "name": "Mismar",
+      "category": "Machinary",
+      "stock": "1000",
+      "description": "",
+      "price": "$45000.00"
+    }
+  ],
+  "orders": [
+    {
+      "product": "Concrete Mixer",
+      "quantity": 11,
+      "total_price": 88000,
+      "id": "39f6"
+    },
+    {
+      "product": "Printer",
+      "quantity": 2,
+      "total_price": 110000,
+      "id": "857c"
+    },
+    {
+      "id": "3d8d",
+      "product": "Concrete Mixer",
+      "quantity": 2,
+      "total_price": 16000
+    },
+    {
+      "product": "Korkoro 2",
+      "quantity": 3,
+      "total_price": 300000,
+      "id": "e765"
+    },
+    {
+      "id": "ab55",
+      "product": "Printer",
+      "quantity": 2,
+      "total_price": 110000
+    },
+    {
+      "id": "76f0",
+      "product": "Mismar",
+      "quantity": 10,
+      "total_price": 200
+    }
+  ],
+  "users": [
+    {
+      "username": "leul",
+      "password": "leul",
+      "id": "39f6"
+    },
+    {
+      "username": "leul",
+      "password": "leul",
+      "id": "857c"
+    }
+  ]
+}
