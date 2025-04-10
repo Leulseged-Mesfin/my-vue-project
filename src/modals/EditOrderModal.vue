@@ -18,6 +18,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  fetchOrders: {
+    type: Function,
+    required: true,
+  },
 });
 
 const orderId = props.orderId;
@@ -76,7 +80,7 @@ const handleSubmit = async () => {
     );
     toast.success("Order updated successfully");
     closeModal();
-    router.go();
+    props.fetchOrders();
   } catch (error) {
     toast.error("Error updating order");
   }

@@ -18,6 +18,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  fetchProducts: {
+    type: Function,
+    required: true,
+  },
 });
 
 const productId = props.productId;
@@ -60,7 +64,7 @@ const handleSubmit = async () => {
     );
     toast.success("Product Updated successfully");
     closeModal();
-    router.go();
+    props.fetchProducts();
   } catch (error) {
     toast.error("Error adding product");
     console.log(error);

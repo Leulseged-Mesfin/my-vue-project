@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, reactive } from "vue";
 import { useRoute } from "vue-router";
 import DeleteOrderModal from "@/modals/DeleteOrderModal.vue";
@@ -118,4 +118,4 @@ const editOrder = async (id) => {
       :orderId="orderId"
     />
   </div>
-</template>
+</template> -->

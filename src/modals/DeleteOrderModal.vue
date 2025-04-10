@@ -17,6 +17,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  fetchOrders: {
+    type: Function,
+    required: true,
+  },
 });
 
 const orderId = props.orderId;
@@ -32,7 +36,7 @@ const deleteOrder = async () => {
     await axios.delete(`${API_BASE_URL}${API_ENDPOINTS.ORDERS}${orderId}`);
     toast.success("Order Deleted Successfully.");
     closeModal();
-    router.go();
+    props.fetchOrders();
   } catch (error) {
     console.error("Error deleting order:", error);
     toast.error("Error deleting Order");

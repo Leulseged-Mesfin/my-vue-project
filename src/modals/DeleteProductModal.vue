@@ -17,6 +17,10 @@ const props = defineProps({
     type: Number,
     required: true,
   },
+  fetchProducts: {
+    type: Function,
+    required: true,
+  },
 });
 
 const productId = props.productId;
@@ -32,7 +36,7 @@ const deleteProduct = async () => {
     await axios.delete(`${API_BASE_URL}${API_ENDPOINTS.PRODUCTS}${productId}`);
     toast.success("Product Deleted Successfully.");
     closeModal();
-    router.go();
+    props.fetchProducts();
   } catch (error) {
     console.error("Error deleting product:", error);
     toast.error("Error deleting Product");

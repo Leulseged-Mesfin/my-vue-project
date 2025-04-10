@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { ref, reactive } from "vue";
 import { useRoute } from "vue-router";
 import DeleteProductModal from "@/modals/DeleteProductModal.vue";
@@ -92,7 +92,6 @@ const editProduct = async (id) => {
             </button>
           </td>
           <td class="px-3 py-3">
-            <!-- {{ typeof item.id }} -->
             <button
               @click="deleteProduct(item.id)"
               :productId="item.id"
@@ -127,8 +126,6 @@ const editProduct = async (id) => {
     />
   </div>
 </template>
-
-<!--
 
 <script setup lang="ts">
 import {
