@@ -5,7 +5,11 @@ import DeleteProductModal from "@/modals/DeleteProductModal.vue";
 import ViewProductModel from "@/modals/ViewProductModel.vue";
 import EditProductModal from "@/modals/EditProductModal.vue";
 import axios from "axios";
-import { API_BASE_URL, API_ENDPOINTS } from "@/utils/apiConfig";
+import {
+  API_BASE_URL,
+  API_BASE_URL_LOGIN,
+  API_ENDPOINTS,
+} from "@/utils/apiConfig";
 
 const route = useRoute();
 
@@ -35,12 +39,19 @@ const editProduct = async (id) => {
 };
 
 const fetchProducts = async () => {
+  const token = localStorage.getItem("access");
+
   try {
     const response = await axios.get(
-      `${API_BASE_URL}${API_ENDPOINTS.PRODUCTS}`
+      `${API_BASE_URL}${API_ENDPOINTS.PRODUCTS}`,
+      {
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      }
     );
     items.value = response.data;
-    console.log(items.value);
+    // console.log(items.value);
   } catch (error) {
     console.error("Error fetching job:", error);
   }

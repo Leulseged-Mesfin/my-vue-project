@@ -17,15 +17,16 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      path: "/login",
+      path: "/",
       component: LoginView,
     },
     {
-      path: "/",
+      path: "/dashboard",
       component: DefaultLayout,
       children: [
         {
-          path: "/",
+          // path: "/dashboard",
+          path: "",
           component: DashboardView,
         },
         {
@@ -67,6 +68,19 @@ const router = createRouter({
       ],
     },
   ],
+});
+
+// ✅ Navigation guard to protect routes
+router.beforeEach((to, from, next) => {
+  const publicPages = ["/"]; // routes that don't require auth
+  const authRequired = !publicPages.includes(to.path);
+  const token = localStorage.getItem("access");
+
+  if (authRequired && !token) {
+    return next("/"); // redirect to login if not authenticated
+  }
+
+  next(); // proceed normally
 });
 
 export default router;
